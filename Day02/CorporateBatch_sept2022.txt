@@ -1,0 +1,30 @@
+Last Lecture
+1 Introduction
+2 Environmental Setup
+
+Today Lecture
+1 vscode Overview
+2 What is Typescript
+3 variable
+4 Data Types 
+5 Type Assertion
+6 Operators
+7 Control statement
+8 Loop Statement
+9 Var vs let
+10 Function
+11 Anonymous Function
+12 Fat arrow function
+13 optional parameter function
+14 default parameter function
+15 array basics
+
+
+Ur Task 
+1 create anonymous funtion of function  without parameter & with return type
+
+2 create anonymous funtion of function  with parameter & without return type
+
+3  create Fat arrow funtion of function  without parameter & with return type
+
+4 create Fat arrow funtion of function  with parameter & without return type
