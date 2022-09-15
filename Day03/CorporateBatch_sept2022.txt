@@ -1,0 +1,71 @@
+Last Lecture
+1 vscode Overview
+2 What is Typescript
+	tsc => it transcompile ur .ts file to ur .js file
+3 variable
+	var a;
+4 Data Types 
+	nuber,string,boolean,any,void,null,undefined
+	var a:number
+	
+5 Type Assertion
+	1 angle 
+		var temp=(<string> a)
+	2 as
+		var temp=(a as string)
+	
+6 Operators
+	== ,=== 
+7 Control statement
+	if,if-else,switch,break,continue
+8 Loop Statement
+	for,while,do-while
+9 Var vs let
+	
+10 Function
+	function add(a:number,b:number):number
+	{
+		return (a+b);
+	}
+11 Anonymous Function
+	let temp1=function (a:number,b:number):number{
+		return (a+b)
+	}
+	temp1(4,5)
+12 Fat arrow function
+		(a:number,b:nuber):number=>{
+			return (a+b)
+		}
+13 optional parameter function
+		function add(a:number,b?:number){
+			
+		}
+14 default parameter function
+	function add(a:number,b:number=9){
+			
+		}
+15 array basics
+	let a:number[]=[2,3,4];
+	let a:number[]=[];
+	let a=[3,4,5];
+
+
+Today Lecture
+1 foreach
+2 Rest Parameter function
+3 push & pop
+4 splice
+5 slice
+6 map
+7 Json Object
+8 Array of Object
+9 Class
+10 property,method,object
+11 constructor
+12 access specifier
+13 Access in same package in different file 
+14 Access in different package 
+
+
+ 
+
