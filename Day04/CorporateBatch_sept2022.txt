@@ -1,0 +1,128 @@
+Last Lecture
+1 foreach
+	a.forEach((value,i)=>{
+		....
+	})
+2 Rest Parameter function
+	dispaly(...item:number[]){
+	.....
+	}
+3 push & pop
+	a.push(10,12)
+	let res=a.pop();
+4 splice
+	a.splice(2,0,45,55,63)
+	a.splice(2,1,100,78)
+5 slice
+	a.slice(1,3)
+6 map
+	let temp=a.map((value)=>{
+		return (value*value)
+	})
+7 Json Object
+	let json={
+		fname:'sumit',
+		id:9
+	}
+	
+	json.fname
+	json.id
+	
+	json["fname"]
+	
+8 Array of Object
+		let arrobj=[
+			{
+				fname:'sumit',
+				id:9,
+				country:{
+					cid:5,
+					cname:'india'
+				},
+				month:["",""],
+				result:[
+					{
+						subj:"m1",
+						marks:45
+					}
+				]
+			},
+			{
+				fname:'sumit',
+				id:9
+			}
+		]
+		for(let i=0;i<arrobj.length;i++){
+		.....
+		
+			for(let j=0;j<arrobj[i].result.length;j++){
+				.....
+			}
+		
+		}
+	
+9 Class
+	export class Mycalss{
+		public id:number;
+		protected fname:string;
+		
+		constructor(id:number,fname:string){
+			this.id=id;
+		}
+		
+		display(){
+			....
+		}
+		
+	}
+	
+	let obj=new Mycalss(9,'sumit');
+	obj.dispaly();
+	
+	export function add(a:number,b:number){
+		return (a+b)
+	}
+	
+	export const pi=3.14;
+	
+	demo2.ts
+	
+	import {Mycalss,add,pi} from './demo1';
+	
+	
+	demo4.ts
+	import {Mycalss,add,pi} from '../day03/demo1';
+	
+	
+10 property,method,object
+11 constructor
+12 access specifier
+13 Access in same package in different file 
+14 Access in different package
+
+Today Lecture
+1 Inheritance
+2 Method override
+3 interface
+4 has a relationship
+5 Angular arch. & file structure => Go through my Youtube video
+6 Create component manually
+7 Create component through CLI
+8 data Binding
+	- data flow is from component file (.ts file )to view file (.html file)
+	1 String interpolation
+	2 Property Binding
+	3 Style Binding
+	4 Class Binding
+9 String interpolation
+10 Property Binding
+
+Ur task 
+1 Check How use single level inheritance
+2 Check How use Multilevel inheritance
+3 Check out the angular arch. video & file structure 
+ 
+
+
+ 
+

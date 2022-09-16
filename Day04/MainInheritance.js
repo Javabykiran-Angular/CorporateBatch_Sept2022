@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var circle_1 = require("./circle");
+var rectangle_1 = require("./rectangle");
+var obj = new circle_1.Circle(2);
+obj.Myarea();
+obj.display();
+var rectobj = new rectangle_1.Rectangle(2, 3);
+rectobj.Myarea();
+rectobj.display();
