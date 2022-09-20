@@ -1,0 +1,173 @@
+Last Lecture
+var a;
+
+1 Inheritance
+	export class Shape{
+		Myarea(){
+		...
+		}
+	}
+	circle.ts
+	import {Shape} from './shape';
+	
+	export class Circle extends Shape{
+			radius:number;
+			area:number;
+			
+			constructor(radius:number){
+			super();
+				this.radius=radius
+			}
+			
+		override Myarea(){
+		...
+		}
+		
+		display(){
+		.....
+		}
+	}
+	
+	mainInter.ts
+	import {circle} from './circle';
+		
+		let obj=new Circle(2);
+		obj.Myarea();
+		obj.display();
+	
+2 Method override
+3 interface
+	export interface Employee{
+		fname:string;
+		lname:string;
+		fullname?:string;
+		dispaly();
+	}
+	
+	export class EmployeDetails implments Employee{
+			fname:string;
+			lname:string;
+			sla:number;
+			dept:Department;
+			
+			constructor(....){
+				....
+				this.dept=new Department(r);
+			}
+		
+		dispaly(){
+			.....
+			this.dept.getRole();
+		}
+	}
+	
+	export class Department{
+		private role:string;
+		
+		constructor(r:string){
+			thus.role=r;
+		}
+		//
+		getRole():string {
+			return this.role
+		}
+		
+		setRole(r:string){
+			this.role=r;
+		}
+		
+		
+	}
+	
+4 has a relationship
+5 Angular arch. & file structure => Go through my Youtube video
+6 Create component manually
+	1 .ts 
+	2 .html 
+	3 .css 
+	employee.component.ts
+		@Componet({
+			selector:'app-employee',
+			templateUrl:'./employee.component.html',
+			StyleUrls:['./employee.component.css']
+		})
+		export class EmployeeComponent{
+		
+		}
+		
+		app.module.ts
+			declaration:[
+				EmployeeComponent
+			]
+	
+7 Create component through CLI
+	ng g c student
+8 data Binding
+	- data flow is from component file (.ts file )to view file (.html file)
+	1 String interpolation
+	2 Property Binding
+	3 Style Binding
+	4 Class Binding
+9 String interpolation
+	{{name}}
+	
+	img src=" {{imgUrl}} "
+	
+10 Property Binding
+	<input [value]="name">
+	<img [src]="ImgUrl">
+
+
+Ur task 
+1 Check How use single level inheritance
+2 Check How use Multilevel inheritance
+3 Check out the angular arch. video & file structure 
+ 
+ <html>
+	<head>
+	</head>
+	<body>
+		....
+	<input type="radio">
+	<input type="checkbox">
+		
+	<select style="color:'red'">
+		<option>
+		
+		
+		<style>
+		h1{
+			color:red;
+		}
+			
+		
+		</style>
+	
+	
+	</body>
+ </html>
+ 
+
+Today Lecture
+1 Style Binding => data binding techq.
+	- data is flow from component file to ur view file
+2 Class Binding
+3 Event Binding
+	- data/http request is flow from view file to ur component file 
+4 click => It is event. U can apply any html tag
+5 $event
+6 template reference variable
+7 real time example
+8 change event
+
+
+
+Task no 1 :- On click event change background color, text color of div tag text.
+
+Task no 2 :- Find square & cube of number on click event use as radio button. Take number as from end user & display the result in another text box, square & cube respectively.
+
+Task no 3 :- Apply Class Binding to button, when button on click to change text style to italic & text color should be change.
+
+Task no 4 :- Set image to div on click on button.
+ 
+

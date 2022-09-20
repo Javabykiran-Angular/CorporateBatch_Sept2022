@@ -1,0 +1,34 @@
+<p>eventbinding1 works!</p>
+
+<!-- syntax=> (eventname)="eventHandler" 
+  eventHandler=> it is custom method that method u have to create in ts file
+-->
+
+<!-- <button (click)="onClick()" >Click</button> <br><br>
+<img (click)="onimage()"
+src="../../assets/bg.jpg" alt=""> -->
+
+<!-- $event=> it is special variable given by angular
+  - it gives current dom element information 
+  - u can only access the data but u can not change/manipulate the data 
+-->
+<!-- <button value="Doller Event Occur!!" (click)="ondollerEvent($event)">Doller Event</button> -->
+
+<!-- template reference variable 
+    - it gives u the dom element information to ur component file
+    - u can change/manipulate its behvoiural of html element
+-->
+
+<!-- <input #inputname type="text" placeholder="Enter the name "> <br><br>
+<button (click)="onSend(inputname)">Send</button>
+<br><br>
+<input #inputname1 type="text" placeholder="Enter the Name "> <br><br>
+<button (click)="onSend1(inputname1.value)">Send</button> -->
+
+
+<input #inputnum1 type="text" placeholder="Enter the num1"> <br><br>
+
+<input #inputnum2 type="text" placeholder="Enter the num2"> <br><br>
+<button (click)="onAddition(inputnum1.value,inputnum2.value)" >Addition</button> <br><br>
+<input [value]="result" type="text" placeholder="Dispaly the result">
+
