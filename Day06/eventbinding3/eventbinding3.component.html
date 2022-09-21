@@ -1,0 +1,26 @@
+<p>eventbinding3 works!</p>
+
+<!-- <input type="text" (keyup)="onKeyUp()"
+placeholder="Key up event"> <br><br>
+
+<input type="text" (keydown)="onKeyDown()"
+placeholder="Key down event"> -->
+
+<!-- event binding without event handler 
+  - if ur one line logic 
+  - for implementation this u have to use a property
+-->
+
+<!-- <button (click)="result=5+5">Addition</button>
+  <h2> {{result}} </h2> -->
+
+  <!-- Two way Binding
+    - we hv to import FormsModule
+    - create a property & bind that property to ur html element
+    - ngModel => directive=> it is attribute directive
+      [(ngModel)]="propertyname" 
+  -->
+
+  <input type="text" [(ngModel)]="name" >
+  {{name}}
+

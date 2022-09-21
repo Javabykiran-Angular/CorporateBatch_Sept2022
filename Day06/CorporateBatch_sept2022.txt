@@ -1,0 +1,97 @@
+Last Lecture
+
+1 Style Binding => data binding techq.
+	- data is flow from component file to ur view file
+	<h2 [style.color]="mycolor"> Apply Style Binding
+	
+	<h2 [style.color]="rating<4?'red':'green'"> Apply Style Binding
+	
+	-ngStyle
+	<div [ngStyle]="json">
+	....
+	
+	style.component.ts
+	mycolor:string='red';
+	rating:number=2;
+	
+	json={
+		color:'red',
+		fontFamily:....,
+		'font-size':...
+	}
+	
+2 Class Binding
+		<h2 [class]="myclass">....
+		
+		<h2 [class.danger]="rating<4"
+			[class.warning]="rating>4">
+			
+		- ngClass
+		<div [ngClass]="json">
+		
+		
+		.ts
+		myclass:string='success';
+		json={
+			'success':!this.isError,
+			'danger' : this.isError,
+			'special':this.isSpecial
+		}
+		
+3 Event Binding
+	- data/http request is flow from view file to ur component file 
+	
+4 click => It is event. U can apply any html tag
+	<button (click)="onClick()">
+	.ts file
+	onClick(){
+		......
+	}
+5 $event
+	- it gives current information of dom element
+	<button (click)="onClick($event)">
+6 template reference variable
+	<input #inputname >
+		<button (click)="onClick(inputname.value)"
+		
+		.ts
+		onClick(myname:any){
+			console.log(myname.value)
+			myname.style.background='blue';
+		}
+		
+7 real time example
+		
+8 change event
+	<input #inputname (change)="onChange(inputname.value)">
+
+
+Task no 1 :- On click event change background color, text color of div tag text.
+
+Task no 2 :- Find square & cube of number on click event use as radio button. Take number as from end user & display the result in another text box, square & cube respectively.
+
+Task no 3 :- Apply Class Binding to button, when button on click to change text style to italic & text color should be change.
+
+Task no 4 :- Set image to div on click on button.
+
+
+Today Lecture
+1 Keyboard Event 
+	- keyup
+	- keydown
+2 event binding without event handler
+3 Two way Binding
+4 Structral directive
+	- to update/manipulate ur dom structure for that we can use Structral directive
+	- *=> it is structural directive
+	1 *ngIf => to check any condition
+	2 *ngFor => to iterate a dynamically 
+	3 *ngSwitch => to perform any specific case 
+5 if directive
+	
+6 for directive
+	1 mouseover
+	2 mouseout
+
+ 
+
