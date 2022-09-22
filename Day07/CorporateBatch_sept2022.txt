@@ -1,0 +1,90 @@
+Last Lecture
+1 Keyboard Event 
+	- keyup
+		<input (keyup)="onKeyUp()">
+		
+		.ts file
+		onKeyUp(){
+			.....
+		}
+		
+	- keydown
+	
+	<input (keydown)="onKeydown()">
+		
+		.ts file
+		onKeydown(){
+			.....
+		}
+2 event binding without event handler
+		<button (click)="result=5+5">
+			{{result}}
+3 Two way Binding
+		<input [(ngModel)]="name">
+		{{name}}
+		app.module.ts
+		import: FormSModule
+4 Structral directive
+	- to update/manipulate ur dom structure for that we can use Structral directive
+	- *=> it is structural directive
+	1 *ngIf => to check any condition
+	2 *ngFor => to iterate a dynamically 
+	3 *ngSwitch => to perform any specific case 
+5 if directive
+	<div *ngIf="rating<4;else elsepart">
+		.....
+	
+	<ng-template #elsepart>
+		.....
+		
+6 for directive
+	
+		<ul >
+			<li *ngFor="let item of course;index as i"> {{i+1}} {{item}}
+				
+		tr *ngFor="let item of arrprod;index as i"
+			(mouseover)="onMouseOver(item)"
+			[ngClass]=" {
+				'highlight':selected===item.name
+			} "
+			
+			(mouseout)="onmouseout()"
+		>
+			<td > {{item.name}}
+		
+		
+		.ts file
+		onMouseOver(item:any){
+				this.selected=item.name;
+		}
+		
+		onmouseout(){
+			this.selected='';
+		}
+	1 mouseover
+	2 mouseout
+	
+Today Lecture
+1 switch Directive
+2 component interaction
+	- to send data from one component to the another component
+	- to make ur parent-child relationship should establish
+		
+3 @Input()
+	- to send data(string/number/json/array/array o object) from parent component to child component
+4 @Output()
+	- i want send data from child component to parent component
+5 @ViewChild()
+	1 u can directly access ur parent html element in parent component file => .ts
+	2 u can access child property as well as child method in parent component file 
+	
+	Task
+	1 Use NgStyle on default switch case
+	2 Use class Binding on default switch case
+	3 send array of object from parent to child component 
+	4 send json object from child to parent component
+	
+	
+
+ 
+

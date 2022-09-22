@@ -1,0 +1,20 @@
+.mainDiv{
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+}
+
+.mainDiv .btndiv{
+  margin: 5px;
+  padding: 5px;
+}
+
+.btndiv button{
+  margin: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.mainDiv .childdiv{
+  margin-left: 20%;
+}
