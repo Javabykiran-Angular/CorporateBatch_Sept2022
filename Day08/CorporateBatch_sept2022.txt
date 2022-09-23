@@ -1,0 +1,85 @@
+Last Lecture
+1 switch Directive
+	- It is structrural directive
+	
+	<div [ngSwitch]='choice'>
+		div *ngSwitchCase='red'
+		 [style.background]='choice'>
+		....
+		div *ngSwitchDefault 
+			[style.background]='choice==''?'black':'orangae''> ...
+	
+2 component interaction
+	- to send data from one component to the another component
+	- to make ur parent-child relationship should establish
+		
+3 @Input()
+	- to send data(string/number/json/array/array o object) from parent component to child component
+	
+	parent.ts 
+		strdata:string='....';
+		
+		parent.html
+		<app-child1 [parentstrdata]="strdata">
+		
+		child1.ts
+		 @Input() parentstrdata:string='';
+		 
+		 child1.html
+		 {{parentstrdata}}
+		
+4 @Output()
+	- i want send data from child component to parent component
+		child.ts
+			@Output()childstrevent=new EventEmitter();
+			
+			onSend(){
+				this.childstrevent.emit(this.strdata);
+			}
+			
+		parent.html
+		{{res}}
+		<app-child1 (childstrevent)="res=$event">
+5 @ViewChild()
+	1 u can directly access ur parent html element in parent component file => .ts
+		<div #divelement>
+			.....
+			</div>
+	parent.ts
+		@ViewChild('divelement') mydiv:ElementRef;
+		
+		AfterViewInit
+		
+		onAfeterViewInit(){
+			console.log(this.mydiv)
+		}
+	
+	2 u can access child property as well as child method in parent component file 
+	
+		@ViewChild(Child4Component) childcomp:Child4Component;
+		
+		onPropertyAccess(){
+			this.childcomp.username='Sumit';
+		}
+		
+		onMethodAccess(){
+			this.childcomp.onSend();
+		}
+	
+	Task
+	1 Use NgStyle on default switch case
+	2 Use class Binding on default switch case
+	3 send array of object from parent to child component 
+	4 send json object from child to parent component
+	
+Today Lecture
+1 Inbuild Pipe
+	pipe - it transform ur data to end user without changing its original value
+2 Custom Pipe
+	- PipeTransform
+	- transform
+
+	
+
+ 
+
