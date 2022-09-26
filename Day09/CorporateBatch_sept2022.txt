@@ -1,0 +1,84 @@
+Last Lecture
+1 Inbuild Pipe
+	pipe - it transform ur data to end user without changing its original value
+	{{strdetails| lowercase}}
+	{{strdetails| Uppercase}}
+	{{strdetails| titlecase}}
+	{{strdetails| slice:1:3}}
+	{{0.025| percent:'1.1'}}
+	{{25|currency:'INR':'code'}}
+	
+	{{5.678456|number:'1.2-3'}} 
+	{{5.678556|number:'1.2-3'}} 
+	
+	{{mydate|date:'longDate'}}
+	{{mydate|date:'dd-MM-yyyy'}}
+	{{mydate|date:'dd'}}
+	
+	{{mydate|date:'hh:mm a'}}
+	
+	Custom Pipe	
+	- PipeTransform
+		
+	@Pipe({
+		name:'summary'
+	})
+	export class SummaryPipe implements PipeTransform{
+			transform(value:any,start:number,end:number){
+				
+				...
+				return ();
+			}
+	}
+	
+	app.module.ts
+	declaration:[
+		SummaryPipe
+	]
+	
+	custompipe.html
+	{{strdetails |summary:0:12}}
+	
+		
+	- transform
+	
+Today Lecture
+1 Services
+	- service is a simple class
+	- with the help o f service u can written ur BL
+	- it is used to code maintability
+	- it is used for code resualbility
+	- it is provide isolation from ur component
+	- it is used to connect ur back end server to ur front end server
+	
+2 DI
+	Dependancy Injection
+3 Http Services
+	http protrocol
+		- set of rules
+	
+4 Http Methods
+	1 get => get data from ur backend server
+	2 post => to send data to backend server 
+	3 put => to upadate any record
+	4 delete => to delete a particular a data
+	
+	
+5 https://jsonplaceholder.typicode.com/posts
+
+	- it is fake service
+	- bcz u send ,upadate,delete it process ur request but the changes is not refected in ur database but it gives reponse to ur http request
+	
+6 Observalable 
+7 @Inectable()
+8 handle error
+	status code
+	2xx=> 200,ok,success
+	3xx=> redirection
+	4xx=> client side error 
+	5xx=> Server side error
+
+	
+
+ 
+
