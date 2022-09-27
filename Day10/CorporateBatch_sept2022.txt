@@ -1,0 +1,148 @@
+Last Lecture
+1 Services
+	- service is a simple class
+	- with the help o f service u can written ur BL
+	- it is used to code maintability
+	- it is used for code resualbility
+	- it is provide isolation from ur component
+	- it is used to connect ur back end server to ur front end server
+	
+2 DI
+	Dependancy Injection
+	
+	export class CourseService{
+		private course:string[]=[...]
+		
+			getCourse()
+			{
+				return this.course;
+			}
+
+		}
+		
+		course.ts
+		constructor(private service:CourseService){
+		}
+		
+		ngOninit(){
+			this.mycourse=this.service.getCourse();
+		}
+		
+		app.module.ts
+		provider:[CourseService]
+	
+3 Http Services
+	http protrocol
+		- set of rules
+	
+4 Http Methods
+	1 get => get data from ur backend server
+	2 post => to send data to backend server 
+	3 put => to upadate any record
+	4 delete => to delete a particular a data
+	
+	
+5 https://jsonplaceholder.typicode.com/posts
+
+	- it is fake service
+	- bcz u send ,upadate,delete it process ur request but the changes is not refected in ur database but it gives reponse to ur http request
+	
+	ng g s http
+	
+	@Injectable({
+		ProvidedIn:"root"
+	})
+	export class HttpService{
+			
+		constructor(private http:HttpClient){}	
+		
+		getPost(){
+			return (this.http.get(this.url))
+		}
+		
+		postdata(obj){
+			return (this.http.post(this.url,obj))
+		}
+		
+		UpdateData(obj){
+			return (this.http.put(`${this.url}/ ${obj.id}`,obj))
+		}
+		
+		deleteData(id){
+			return (this.http.delete(` ${this.url}/${id} `))
+		}
+		
+	}
+	
+	
+	post.ts
+	constructor(private service:HttpService){}
+	
+	ngOninit(){
+		this.GetData();
+	}
+	
+	GetData(){
+		this.service.getPost()
+		.subscribe((response:any)=>{
+			this.posts=response
+		},(error)=>{
+			if(error.status>=400 && error.status<=499){
+				alert("Client error")
+			}
+		})
+	}
+	
+6 Observalable 
+7 @Inectable()
+8 handle error
+	status code
+	2xx=> 200,ok,success
+	3xx=> redirection
+	4xx=> client side error 
+	5xx=> Server side error
+	
+Today Lecture
+1 Routing
+	- navigation from one component to another component
+2 Routing steps
+	1 configure the route
+	2 <router-outlet>
+	3 establish a link/nagigate to component
+	
+3 Routing using routerlink
+4 Routing using programatically
+5 send parameter
+6 send query parameter
+7 child routes
+	
+8 lazy loading
+	
+9 empty route 
+10 wild cart operator
+
+task
+1 send parameter to your laptop component
+2 send query parameter to your television component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
+
