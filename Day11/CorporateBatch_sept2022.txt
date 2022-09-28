@@ -1,0 +1,168 @@
+Last Lecture
+1 Routing
+	- navigation from one component to another component
+2 Routing steps
+	1 configure the route
+	2 <router-outlet>
+	3 establish a link/nagigate to component
+	
+	[
+		{
+			path:'',component:HomeComponent
+		},
+		{
+			path:'Page2/:id',component:Page2Component
+		},
+		{
+			path:"products",childern:[
+				{
+					path:'',component:ProductComponent
+				},
+				{
+					path:"laptop",component:laptop
+				}
+				
+			]
+		},
+			
+		{
+			path:"user",loadChilder:()=>import('./usr/usermodule').then(m)=>m./usermodule
+		}
+		
+		{
+			path:"**",component:NotFoundComponent
+		}
+	]
+	
+	app.component.html
+	
+	<router-outlet>
+	
+	home.html
+	<a [routerLink]="['/Page',myid]">Page2 </a>
+	
+	<a routerLink='/queryparam' [queryParams]="json"
+	
+	
+	button (click)="onPage2()">
+	
+	home.ts
+	Router 
+	onPage2(){
+		this.router.navigate(['/Page2',this,myid]);
+	}
+	
+	onQueryparam(){
+		this.router.navigate(['/queryparam'],{
+			queryParams:this.json
+		})
+	}
+	
+	page2.ts
+	ActivatedRoute
+	
+	myid:string|null='';
+	
+	this.route.ParamMap
+	.subscribe((param)=>{
+		this.myid=param.get("id");
+	})
+	
+	queryparam.ts
+	ActivatedRoute
+	this.route.QueryParamMap
+	.subscribe((param)=>{
+		this.myid=param.get("id");
+	})
+	
+	ng g m user --routing 
+	
+	[
+		{
+			path:'',component:listusercomp
+		},
+		...
+	]
+	
+3 Routing using routerlink
+4 Routing using programatically
+5 send parameter
+6 send query parameter
+7 child routes	
+8 lazy loading	
+9 empty route 
+10 wild cart operator
+
+Today Lecture
+1 Overview of Bootstrap
+	- It is css Freamwork
+	- to style ur html elements
+	- to make responsive ur web page 
+2 Basic grid system
+3 Integration of Bootstrap
+	there are 2 ways 
+	1 using online CDN link
+	2 offline bootstrap
+4 Template driven form => TDF
+	- login,signup,f/b 
+	- all simple validation is done on view side 
+	
+ FormControl => It is class 
+	1 valid => true
+	2 invalid => true/false
+	3 touched => true/false 
+	4 pristine => true/false
+	5 dirty  => true/false 
+	6 errors => object
+	
+	steps	
+	1 to create instance of FormControl class => for that we use ngModel=> it holds the instance of FormControl class, it is mandatory to use name attribute 
+	2 we create template ref variable, we can assign to ngModel
+	3 use errors property for other validation but u hv use required attribute as well 
+	
+5 Validation of form
+
+Task
+	create login api => 
+		u hve create seperate entity class registration
+		ur request 
+		email id & password that will send from frontend 
+		
+		response => 
+		we want a response 
+		1 if user is valid 
+		{
+			msg:"valid user",
+			user:{
+			.....
+			}
+		}
+		2 if user is not valid 
+		
+		{
+			msg:"Invalid user",
+			user:null
+		}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
+
