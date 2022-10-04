@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <app-header></app-header>
+
+  <br>
+    <div>
+        <button routerLink="addemp" class="btn btn-success">Add Employee</button>
+        <button class="btn btn-warning"  (click)="onUpdate(popUp)" >Update Employee</button>
+        <button class="btn btn-danger" (click)="onDelete()" >Delete Employee</button>
+    </div>
+
+    <ng-template #popUp >
+     <app-update-emp [parentdata]="empObj"></app-update-emp>
+      <button (click)="modalRef.hide()" class="btn btn-danger">Cancel</button>
+   </ng-template>
+
+  <br>
+  <div>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <th>#</th>
+        <th>Action</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Status</th>
+        <th>Created date</th>
+        <th>Upadatated date</th>
+        <th>Country</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of EmpData | paginate: { itemsPerPage: 5, currentPage: p };index as i">
+          <td> {{i+1}} </td>
+          <td> <input type="radio" name="record" (click)="onRadioCheck(item)"> </td>
+          <td><a [routerLink]="['details',item.id]">{{item.name | titlecase}}</a>  </td>
+          <td> {{item.departmentit}} </td>
+          <td> <h5><span 
+                [ngClass]="{
+                  'badge':true,
+                  'badge-pill':true,
+                  'badge-success':item.status.toLowerCase()==='active',
+                  'badge-danger':item.status.toLowerCase()==='suspend',
+                  'badge-warning':item.status.toLowerCase()==='inactive'
+
+                }"  
+                style="padding: 8px;"
+            >{{item.status}}</span></h5>  </td>
+          <td> {{item.createddtm|date}} </td>
+          <td> {{item.updateddtm|date:'dd-MM-yyyy'}} </td>
+          <td> {{item.country.cname}} </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"
+      style="float:right ;"
+    ></pagination-controls>
+  </div>
+
+  </div>
